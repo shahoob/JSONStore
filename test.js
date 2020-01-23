@@ -1,6 +1,6 @@
 const os = require('os');
 
-const testStore = require('./app.js');
+const { Main } = require('./app.js');
 
 const testStore = new Main({
     path: os.tmpdir(),
