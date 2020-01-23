@@ -1,6 +1,6 @@
 const os = require('os');
 
-import { Main } from './app.js'; // ES6 (And up) Only
+const testStore = require('./app.js');
 
 const testStore = new Main({
     path: os.tmpdir(),
