@@ -10,7 +10,7 @@ class Main {
     constructor(options) {
         this.json = !fs.existsSync(options.path) ? fs.writeFileSync(options.path, JSON.stringify({})) : JSON.parse(fs.readFileSync(options.path));
         this.name = options.name;
-        this.opts = options
+        this.opts = options;
     }
 
     create(key, value) {
