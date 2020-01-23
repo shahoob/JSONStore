@@ -1,9 +1,10 @@
 const os = require('os');
+const path = require('path');
 
 const { Main } = require('./app.js');
 
 const testStore = new Main({
-    path: os.tmpdir(),
+    path: path.join(os.homedir(), 'tempStore.json'),
     name: 'Temp JSONStore'
 });
 
