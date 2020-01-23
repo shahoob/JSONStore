@@ -8,17 +8,18 @@ const save = (path, obj) => {
 
 class Main {
     constructor(options) {
-        this.json = !fs.existsSync(options.path) ? fs.writeFileSync(path, JSON.stringify(new Object())) : JSON.parse(fs.readFileSync(options.path));
+        this.json = !fs.existsSync(options.path) ? fs.writeFileSync(options.path, JSON.stringify({})) : JSON.parse(fs.readFileSync(options.path));
         this.name = options.name;
+        this.opts = options
     }
 
     create(key, value) {
         this.json[key] = value;
-        save(options.path, this.json);
+        save(this.opts.path, this.json);
     }
     remove(key) {
         delete this.json[key];
-        save(options.path, this.json);
+        save(this.opts.path, this.json);
     }
     get(key) {
         if (!key) return this.json; else return this.json[key];
@@ -27,7 +28,7 @@ class Main {
         for (const key in this.json) {
             delete this.json[key];
         }
-        save(path, this.json);
+        save(this.opts.path, this.json);
     }
 }
 
