@@ -20,3 +20,6 @@
  From [npm](https://npmjs.com) (Recommended):
  1. `npm i jsonstore` or `npm install jsonstore`
  Wow. Only 1 step!
+
+ ## API Docs
+ There in the wiki page.
