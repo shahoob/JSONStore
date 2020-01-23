@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/shahoob/JSONStore/issues"
   },
-  "homepage": "https://github.com/shahoob/JSONStore#readme"
+  "homepage": "https://github.com/shahoob/JSONStore#readme",
+  "dependencies": {
+    "@aitodotai/json-stringify-pretty-compact": "^1.3.0"
+  }
 }

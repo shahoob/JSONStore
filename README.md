@@ -4,7 +4,7 @@
  ## The goods
  1. Easy as pie
  2. ES6-built
- 3. ZERO DEPENDENCIES!!! (means no other's help)
+ 3. 0& OF TONS DEPENDENCIES!!! (means only needed other's help (not lots of them))
 
  ## Install
  From Git (Clone):
@@ -20,4 +20,3 @@
  From [npm](https://npmjs.com) (Recommended):
  1. `npm i jsonstore` or `npm install jsonstore`
  Wow. Only 1 step!
- 
