@@ -33,3 +33,16 @@
  ### Fixes
  1. Remove the keyword `delete` and align the removed items with `undefined`.
  2. Use `Object.defineProperty` instead of this `obj[key] = value;`, Which caused `TypeError` Errors.
+
+ ## Notes
+ The test in this module seems only works on windows.
+ You may want to help this project to include not only support for Linux, but also macOS.
+
+ ## Coming up features
+
+ ### `In-memory` Storage type
+ Because it uses only memory (not storing into a file),
+ All OSes can run it!
+ It has the same syntax,
+ Only creating a storage is that there's no requirement to put the path for storing it.
+ Trying to include the path will only have the same thing.
