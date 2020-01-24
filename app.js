@@ -35,6 +35,33 @@ class Main {
     }
 }
 
+class InMemory extends Main {
+    constructor(options) {
+        this.json = {};
+        this.name = options.name;
+        this.opts = options;
+    }
+
+    create(key, value) {
+        Object.defineProperty(this.json, key, {
+            value: value,
+            writable: true
+        });
+    }
+    remove(key) {
+        this.json[key] = undefined;
+    }
+    get(key) {
+        if (!key) return this.json; else return this.json[key];
+    }
+    reset() {
+        for (const key in this.json) {
+            delete this.json[key];
+        }
+    }
+}
+
 module.exports = {
-    Main
+    Main,
+    InMemory
 };

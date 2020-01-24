@@ -1,12 +1,23 @@
 const os = require('os');
 const path = require('path');
 
-const { Main } = require('./app.js');
+const { Main, InMemory } = require('./app.js');
 
-const testStore = new Main({
-    path: path.join(os.homedir(), 'tempStore.json'),
-    name: 'Temp JSONStore'
-});
+const storageType = process.env.storageType || 'In-memory';
+
+switch(storageType) {
+    case 'Main':
+        const testStore = new Main({
+            path: path.join(os.homedir(), 'tempStore.json'),
+            name: 'Temp JSONStore'
+        });
+        break;
+        case 'In-memory':
+            const testStore = new InMemory({
+                name: 'Temp JSONStore'
+            });
+            break;
+}
 
 console.log('Creating item...');
 testStore.create('test', true);
@@ -60,3 +71,4 @@ console.log(testStore.get('json'), testStore.get('jsonp'), 'Showing the entire j
 console.log(testStore.json, 'Ok. Time to push that reset button! in, 0 miliseconds');
 testStore.reset();
 console.log('Boom! All gone! Look At this!', testStore.json, 'It\'s freaking empty! Wow!\n It Worked!');
+console.log('But one more thing, Showing name...', testStore.name);

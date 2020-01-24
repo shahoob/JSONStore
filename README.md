@@ -25,6 +25,12 @@
  There in the wiki page.
 
  ## What's new?
+ In `1.1.1`:
+ New storage type has been added!
+ ### New Functions
+ New storage type: `In-memory`
+ ### Fixes
+ none
  In `1.0.1`:
  JSONStore had `TypeError`s while trying to create and remove items.
  This case has been patched
@@ -40,9 +46,6 @@
 
  ## Coming up features
 
- ### `In-memory` Storage type
- Because it uses only memory (not storing into a file),
- All OSes can run it!
- It has the same syntax,
- Only creating a storage is that there's no requirement to put the path for storing it.
- Trying to include the path will only have the same thing.
+ ### `Secret` Storage type
+ It has the same syntax. but with crytpo technologys!
+ Also the syntax can look a bit different.
