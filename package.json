@@ -1,6 +1,6 @@
 {
   "name": "jsonstore",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple json-based storage (for like settings)",
   "main": "app.js",
   "scripts": {

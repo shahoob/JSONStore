@@ -14,11 +14,14 @@ class Main {
     }
 
     create(key, value) {
-        this.json[key] = value;
+        Object.defineProperty(this.json, key, {
+            value: value,
+            writable: true
+        });
         save(this.opts.path, this.json);
     }
     remove(key) {
-        delete this.json[key];
+        this.json[key] = undefined;
         save(this.opts.path, this.json);
     }
     get(key) {
