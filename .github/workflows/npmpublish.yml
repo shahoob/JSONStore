@@ -18,7 +18,6 @@ jobs:
 
   publish-npm:
     needs: build
-    name: Publish to npm
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
@@ -33,7 +32,6 @@ jobs:
 
   publish-gpr:
     needs: build
-    name: Publish to GitHub Package Registry
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
