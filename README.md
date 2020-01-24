@@ -4,7 +4,7 @@
  ## The goods
  1. Easy as pie
  2. ES6-built
- 3. 0& OF TONS DEPENDENCIES!!! (means only needed other's help (not lots of them))
+ 3. 0% OF TONS DEPENDENCIES!!! (means only needed other's help (not lots of them))
 
  ## Install
  From Git (Clone):
